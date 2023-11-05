@@ -16,17 +16,14 @@
 
 body {
     display: flex;
-    justify-content: center;
+    justify-content: center;}
    
-}
-
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-   /*-*/ padding: 0 10px;
-    /*-*/
-    margin: auto; /*+*/
+    padding: 0 10px;
+    margin: auto; 
 }
 
 a {
@@ -149,19 +146,20 @@ a {
     width: 65%;}
      
 
-.Hébergements-cards{margin-top: 5%;
+.hebergements-cards{margin-top: 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); 
 }
+
 .hébergement{ margin-top: 50px;}
 
- .étoiles { margin-top: -5px; 
+ .etoiles { margin-top: -5px; 
 }
 
-#Afficherplus{margin-top: 1em;}
+#afficherplus{margin-top: 1em;}
 
 /****** Header nav ***********/
 .headernavigation {
@@ -194,7 +192,7 @@ a {
 
 /***Boutton rechercher***/
 
-#BouttonRechercher{
+#bouttonrechercher{
      border: 1px solid #0065FC;
      color: white;
      font-weight: bold;
@@ -204,12 +202,12 @@ a {
      height: 38px;
      margin: -1px;
       }
-#BouttonRechercher:active{
+#bouttonrechercher:active{
     background-color: #0055CC;
     border: 1px solid #0055CC;
 }
 
-#BouttonRechercher:hover{
+#bouttonrechercher:hover{
 cursor: pointer;
 }
       
@@ -240,7 +238,7 @@ cursor: pointer;
 
 /****Filtres****/
 
-.Filtre { 
+.filtre { 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;  
@@ -255,7 +253,7 @@ cursor: pointer;
 
 .h4{margin-right: 20px;}
 
-.Economique
+.economique
 {
     border: solid 2px #D3D3D3;
     border-radius: 30px;
@@ -285,12 +283,12 @@ cursor: pointer;
     padding: 3px 6px 3px 6px;
     font-size: 10px;}
 
-.Economique:hover{
+.economique:hover{
     color: black;
     background-color: #DEEBFF;
     cursor: pointer;}
 
-.Familial{
+.familial{
     border: solid 2px #D3D3D3;
     border-radius: 30px;
     display: flex;
@@ -299,14 +297,14 @@ cursor: pointer;
     width: 120px;
     height: 40px;}
     
-.Familial:hover{
+.familial:hover{
     color: black;
     background-color: #DEEBFF;
     cursor: pointer;
 }
 .fa-solid.fa-person{margin-right: 13px;}
 
-.Romantique{
+.romantique{
     border: solid 2px #D3D3D3;
     border-radius: 30px;
     display: flex;
@@ -318,12 +316,12 @@ cursor: pointer;
 
 .fa-solid.fa-heart{margin-right: 10px;}
 
-.Romantique:hover{
+.romantique:hover{
     color: black;
     background-color: #DEEBFF;
     cursor: pointer;}
 
-.Pepites{
+.pepites{
     border: solid 2px #D3D3D3;
     border-radius: 30px;
     display: flex;
@@ -335,13 +333,13 @@ cursor: pointer;
 
 .fa-solid.fa-fire{margin-right: 10px;}
 
-.Pepites:hover{color: black;
+.pepites:hover{color: black;
 background-color: #DEEBFF;
 cursor: pointer;}
 
 
-/****** Activités ***********/
-.activités {
+/****** Activités ********/
+.activity {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -349,7 +347,7 @@ cursor: pointer;}
     margin-bottom: 30px;
 
 }
-.activitéscards {
+.activitycards {
     justify-content: center ;
     display: flex;
     flex-direction: row;
@@ -359,18 +357,17 @@ cursor: pointer;}
     margin-top: 30px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-.imageactivités{
+.imageactivity{
     width: 20rem;
     background-color: white;
     border-radius: 20px;
     margin-bottom: 30px;}
 
-.imageactivités:hover {transform: scale(1.05);}
+.imageactivity:hover {transform: scale(1.05);}
 
-.imageactivités img{
+.imageactivity img{
     width: 100%;
     height: 400px;
-    
     object-fit: cover;
     border-top-right-radius:15px;
     border-top-left-radius: 15px;
@@ -425,7 +422,7 @@ cursor: pointer;}
         gap: 10px;
         margin: 0;}
 
-    .Familial{
+    .familial{
         padding-right:25px ;
         border: solid 2px #D3D3D3;
         border-radius: 30px;
@@ -479,7 +476,6 @@ cursor: pointer;}
         width: 100%;
     }
     
-    
     hr {
         height: 3px;
         border: none; 
@@ -487,7 +483,7 @@ cursor: pointer;}
       }
       
 
-    #BouttonRechercher{display: none;}
+    #bouttonrechercher{display: none;}
 
     .fa-solid.fa-magnifying-glass{color: white;}
 
@@ -511,7 +507,6 @@ cursor: pointer;}
     hr{display: none;}
     
 }
-
 
 /* Medium devices  hebergement populaires (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
@@ -547,7 +542,7 @@ cursor: pointer;}
     }
 }
 
-/******  hébergement et Populaires, , Small devices (phones, less than 768px) *******/
+/******  hébergement et Populaires, Small devices (phones, less than 768px) *******/
 
 @media (max-width: 767.98px) {
     .image {
@@ -567,7 +562,7 @@ cursor: pointer;}
         border-top-left-radius: 15px;
     }
 
-    .Hébergements-cards {
+    .hebergements-cards {
         margin-top: 5%;
         display: flex;
         flex-direction: column; 
@@ -575,7 +570,7 @@ cursor: pointer;}
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     }
 
-    #hébergement{background-color:white; margin-top: 20px; }
+    #hebergementmobile{background-color:white; margin-top: 20px; }
    
     .hebergements-and-populaires {
         flex-direction: column-reverse;  
@@ -587,18 +582,11 @@ cursor: pointer;}
         width: 100%;
     }
 
-    
     .populaires-cards {
         display: flex;
         flex-direction: column;
     }
-
-    #Fondpopulaire {
-        width: 100%;
-        border-radius: 0px;}
 }
-
-
 
  /****** Tablette hebergements ******/
 @media screen and (max-width: 1024px) {
@@ -608,22 +596,22 @@ cursor: pointer;}
         justify-content: center ;
         margin-bottom: 20px;
     }
-    .Hébergements-cards a {display: flex;
+    .hebergements-cards a {display: flex;
         width: auto;
        }
 }
 
- /****** activité ******/
+ /****** activité mobile ******/
 
  @media all and (max-width: 768px) {
-    .activitéscards {
+    .activitycards {
  
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;  
     }
 
-    .imageactivités {
+    .imageactivity {
      width: 90%;
      margin-bottom: 30px;
      height: 230px;
@@ -632,11 +620,43 @@ cursor: pointer;}
      border-radius: 20px;
      margin-bottom: 30px;}
  
-     .imageactivités img {
+     .imageactivity img {
          width: 100%;
          height: 165px;
        }
     }
+
+/****** Activités en Tablette ******/
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .activitycards {
+        
+        flex-wrap: nowrap;
+        
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    }
+    
+    .imageactivity {
+        width: 13rem;
+        background-color: white;
+        border-radius: 20px;
+       
+    }
+    
+    .imageactivity:hover {
+        transform: scale(1.05);
+    }
+    
+    .imageactivity img {
+        height: 10rem;
+        width: 100%; 
+        object-fit: cover;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    
+}
+
 /****** Footer ******/
 @media (max-width: 768px) {
     .footer {
@@ -655,38 +675,6 @@ cursor: pointer;}
     .margedroite{margin-left:20px;}
 
 /****** Marge juste en mobile ******/
-    .hébergement , .activités, .hébergement,.Filtre, .i 
+    .hébergement , .activity, .hébergement,.filtre, .i 
     {padding: 0 1.25rem;}
-}
-
-/****** Activités en Tablette ******/
-@media (min-width: 768px) and (max-width: 1024px) {
-    
-    
-    .activitéscards {
-        
-        flex-wrap: nowrap;
-        
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    }
-    
-    .imageactivités {
-        width: 13rem;
-        background-color: white;
-        border-radius: 20px;
-       
-    }
-    
-    .imageactivités:hover {
-        transform: scale(1.05);
-    }
-    
-    .imageactivités img {
-        height: 10rem;
-        width: 100%; 
-        object-fit: cover;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 15px;
-    }
-    
 }
