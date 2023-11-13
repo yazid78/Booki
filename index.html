@@ -26,8 +26,8 @@
                     <img src="./images/logo/Booki.png" alt="logo Booki" width="60" height="20">
                 </a>
                 <div class="menu">
-                    <a class="barre" href="#hébergement">Hébergements</a>
-                    <a class="barre" href="#activity">Activités</a>
+                    <a class="barre" href="#idhebergement">Hébergements</a>
+                    <a class="barre" href="#idactivity">Activités</a>
                 </div>
             </nav>
             <hr>
@@ -37,11 +37,11 @@
 <!--Barre de Recherche Marseille-->   
 
         <main>
-            <div class="hébergement"> 
+            <div class="recherchehebergement"> 
                 <h2>Trouver votre hébergement pour des vacances de rêve</h2>
                 <p>En plein centre-ville ou pleine nature</p>
                 <form action="/votre-page-de-recherche" method="get">
-                    <div class="BarreRecherche">
+                    <div class="barre_recherche">
                         <i class="fa-solid fa-location-dot"></i>
                         <input type="text" id="Recherche" placeholder="Marseille, France">
                         <input type="submit" id="bouttonrechercher" value="Rechercher">
@@ -55,10 +55,10 @@
                 <section class="filtre">
             <h4 class="h4">Filtres</h4>
          <div class="titrefiltres">
-             <div class="economique"><i class="fa-solid fa-money-bill"></i> <a href="#"><strong>Economique</strong></a></div>
-             <div class="familial"><i class="fa-solid fa-person"></i><a href="#"><strong>Familial</strong></a></div> 
-             <div class="romantique"><i class="fa-solid fa-heart"></i><a href="#"><strong>Romantique</strong></a></div> 
-             <div class="pepites"><i class="fa-solid fa-fire"></i><a href="#"><strong>Nos pépites</strong></a></div>
+             <div class="economique btn_filtres"><i class="fa-solid fa-money-bill"></i> <a href="#"><strong>Economique</strong></a></div>
+             <div class="familial btn_filtres"><i class="fa-solid fa-person"></i><a href="#"><strong>Familial</strong></a></div> 
+             <div class="romantique btn_filtres"><i class="fa-solid fa-heart"></i><a href="#"><strong>Romantique</strong></a></div> 
+             <div class="pepites btn_filtres"><i class="fa-solid fa-fire"></i><a href="#"><strong>Nos pépites</strong></a></div>
           </div>        
                 </section>
             <div class="i"> 
@@ -69,11 +69,12 @@
 
 <!--Photo Hébergement à Marseille--> 
             <div class="hebergements-and-populaires">
-                <section class="hebergements" id="hebergementmobile">
+                <section class="hebergements" id="idhebergement">
                     <div>
                         <h2 class="section-title"> Hébergements à Marseille</h2>
                     </div>
                 <div class="hebergements-cards">
+                        <div class="premier_rangee">
                     <a href="#">
                         <article class="image">
                             <img src="./images/hebergements/fred-kleber.jpg" alt="image">
@@ -128,7 +129,8 @@
                             </div>
                         </article>
                     </a>
-
+                </div>
+                    <div class="deuxieme_rangee">
                     <a href="#">
                         <article class="image">
                             <img src="./images/hebergements/annie-spratt.jpg" alt="image">
@@ -182,6 +184,7 @@
                             </div>
                         </article>
                     </a>
+                    </div>
                 </div>
 
                     <div id="afficherplus">
@@ -261,7 +264,7 @@
                     </div>
                     <!-- ACTVITÉS À MARSEILLE -->
 
-        <section class="activity">
+        <section class="activity" id="idactivity">
             <h2>Activités à Marseille</h2>
             <div class="activitycards">
                 <div class="imageactivity">
@@ -303,33 +306,33 @@
         <footer >
             <div class="footer">
                 <ul>
-                    <li>
-                        <strong>A propos</strong>
+                    <li class="bold">
+                        A propos
                     </li>
                     <li><a href="#">Fonctionnement du site</a></li>
                     <li><a href="#">Conditions générales</a></li>
                     <li><a href="#">Données et confidentialité</a></li>
                 </ul>
                 <ul>
-                    <li>
-                        <strong>Nos hébergement</strong>
+                    <li class="bold">
+                        Nos hébergement
                     </li>
                     <li><a href="#">Charte qualité</a></li>
                     <li><a href="#">Proposer votre hotel</a></li>
                 </ul>
                 <ul class="margedroite">
-                    <li>
-                        <strong>Assistance</strong>
+                    <li class="bold">
+                        Assistance
                     </li>
                     <li><a href="#">Centre d'aide</a></li>
                     <li><a href="#">Nous contacter</a></li>
                 </ul>
             </div>
         </footer>
-        
-    </div>
-    
         </main>
+    </div>
+
+        
 </body>
 </html>
 

@@ -125,7 +125,7 @@ a {
 .image{
     
     height: 240px;
-    width: 15em;
+    width: 100%;
     flex-direction: row;
     background-color: white;
     padding: 5px;
@@ -148,13 +148,34 @@ a {
 
 .hebergements-cards{margin-top: 5%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    
+   
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); 
 }
+.premier_rangee{display: flex;
+    gap: 5%;
+    width: 100%; 
+    justify-content: center;  
+}
 
-.hébergement{ margin-top: 50px;}
+.deuxieme_rangee{display: flex;
+    gap: 5%;
+    width: 100%;
+    justify-content: center;
+ }
+
+.premier_rangee a{
+    width: 15em; 
+    
+}
+.deuxieme_rangee a{
+    width: 15em; 
+    
+}
+
+
+.recherchehebergement{ margin-top: 50px;}
 
  .etoiles { margin-top: -5px; 
 }
@@ -200,8 +221,8 @@ a {
      border-top-right-radius: 12px; 
      border-bottom-right-radius: 12px; 
      height: 38px;
-     margin: -1px;
       }
+      
 #bouttonrechercher:active{
     background-color: #0055CC;
     border: 1px solid #0055CC;
@@ -232,7 +253,7 @@ cursor: pointer;
     justify-content: center;
     background-color:#D3D3D3;
 }
-.BarreRecherche {display:flex;}
+.barre_recherche {display:flex;}
     
 .loupe{display: none;}
 
@@ -240,18 +261,20 @@ cursor: pointer;
 
 .filtre { 
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;  
-    margin-top: 15px; 
-    align-items: baseline; 
+    gap: 15px;
+    flex-direction: row;
+    margin-top: 15px;
+    align-items: center;   
 }
 
-.titrefiltres{display: flex; flex-wrap: wrap; flex-direction: row;
-    margin-top: 15px;
-    justify-content: left; gap: 15px;
+.titrefiltres
+    {gap: 15px;
+    display: flex;  
+    flex-direction: row;
+    width: 100%;
    }
 
-.h4{margin-right: 20px;}
+
 
 .economique
 {
@@ -352,7 +375,6 @@ cursor: pointer;}
     display: flex;
     flex-direction: row;
     gap: 3%;
-    
     flex-wrap: nowrap;
     margin-top: 30px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -398,6 +420,8 @@ cursor: pointer;}
 }
 .margedroite{margin-right:5% ;}
 
+.bold {font-weight: bold;}
+
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -405,22 +429,41 @@ cursor: pointer;}
 
 /****** Media queries ***********/
 
- /****** Loupe et Filtres et Nav ******/
+ /****** Loupe et Filtres et Nav , Barre de recherche ******/
  @media screen and (max-width:768px) {
-    body {margin: 0;}
+    body {
+        margin: 0;
+    }
 
-    .main-container { display: block; justify-content: initial; 
+    .main-container {
+        display: block; 
+        justify-content: initial; 
         width: 100%;
         max-width: 768px;
         padding: 0;
         margin: 0;
     }
-
+    .filtre { 
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;   
+        align-items: flex-start;
+    }
+    
     .titrefiltres { 
-        width: 100%;
+        
+        column-gap: 3%;
         flex-wrap: wrap; 
-        gap: 10px;
-        margin: 0;}
+        gap: 20px;
+      }
+
+    .btn_filtres{
+        flex: 1 1 45%;
+        }
+
+    .h4{
+        margin-left: 25px;
+        }
 
     .familial{
         padding-right:25px ;
@@ -468,7 +511,7 @@ cursor: pointer;}
         position: absolute;
         background-color: #0065FC;
         height: 3px;
-        top: 31px; 
+        top: 35px; 
         transition: 0.1s;
     }
     
@@ -497,6 +540,17 @@ cursor: pointer;}
         background-color: #0065FC;
         border-radius: 15px;
         cursor: pointer;} 
+
+    .barre_recherche{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        }
+       
+    #Recherche{
+        flex: 1; 
+        text-align: left;
+        }
 }
 
 /**** Styles pour desktop ****/
@@ -508,15 +562,16 @@ cursor: pointer;}
     
 }
 
-/* Medium devices  hebergement populaires (tablets, less/equal than 1024px) */
+/* Medium devices  hebergement et populaires (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
     }
   
+
     .hebergements {
-        width: 100%;
-    }
+        width: 100%;}
+         
 
     .populaires {
         width: 100%;
@@ -542,9 +597,36 @@ cursor: pointer;}
     }
 }
 
+
+ /****** Tablette hebergements ******/
+@media screen and (min-width:768px) and (max-width: 1024px) {
+     .image{
+        flex-direction: column;
+        
+        justify-content: center ;
+        margin-bottom: 20px;
+    }
+    .hebergements-cards a {
+        display: flex;
+       }
+}
+
 /******  hébergement et Populaires, Small devices (phones, less than 768px) *******/
 
 @media (max-width: 767.98px) {
+    .premier_rangee {
+        display: block;
+        justify-content: initial;
+    }
+
+    .deuxieme_rangee{
+        display: block;
+        justify-content: initial;
+    }
+
+    .premier_rangee a {
+        width: auto; /* Optional: Reset the width */
+    }
     .image {
         height: 240px; 
         width: 100%; 
@@ -553,7 +635,7 @@ cursor: pointer;}
         border-radius: 20px;
         margin-bottom: 20px; 
     }
-
+    
     .image img {
         width: 100%;
         height: 50%;
@@ -570,7 +652,7 @@ cursor: pointer;}
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     }
 
-    #hebergementmobile{background-color:white; margin-top: 20px; }
+    #idhebergement{background-color:white; margin-top: 20px; }
    
     .hebergements-and-populaires {
         flex-direction: column-reverse;  
@@ -586,19 +668,6 @@ cursor: pointer;}
         display: flex;
         flex-direction: column;
     }
-}
-
- /****** Tablette hebergements ******/
-@media screen and (max-width: 1024px) {
-     .image{
-        flex-direction: column;
-        
-        justify-content: center ;
-        margin-bottom: 20px;
-    }
-    .hebergements-cards a {display: flex;
-        width: auto;
-       }
 }
 
  /****** activité mobile ******/
@@ -626,21 +695,18 @@ cursor: pointer;}
        }
     }
 
-/****** Activités en Tablette ******/
+/****** Activités en Tablette + filtres ******/
 @media (min-width: 768px) and (max-width: 1024px) {
     
-    .activitycards {
-        
+    .activitycards { 
         flex-wrap: nowrap;
-        
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     }
     
     .imageactivity {
         width: 13rem;
         background-color: white;
-        border-radius: 20px;
-       
+        border-radius: 20px;  
     }
     
     .imageactivity:hover {
@@ -654,7 +720,7 @@ cursor: pointer;}
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
     }
-    
+     .filtre{flex-wrap: wrap;}
 }
 
 /****** Footer ******/
@@ -675,6 +741,6 @@ cursor: pointer;}
     .margedroite{margin-left:20px;}
 
 /****** Marge juste en mobile ******/
-    .hébergement , .activity, .hébergement,.filtre, .i 
+    .recherchehebergement , .activity, .i ,.titrefiltres 
     {padding: 0 1.25rem;}
 }
